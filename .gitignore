@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*$py
+
+# Django Stuff:
+*.log
+migration
+
+# Virtual Environment
+cel_venv
