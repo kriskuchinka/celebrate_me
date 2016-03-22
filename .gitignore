@@ -8,3 +8,6 @@ migration
 
 # Virtual Environment
 cel_venv
+
+# Add local DB settings
+local_settings.py
