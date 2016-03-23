@@ -7,7 +7,6 @@ from django.contrib.auth.models import User
 class Deceased(models.Model):
 	"""Defines the attributes and data points associated with the person who the memorial site is being created for."""
 
-	#---!!!!----> How do I refer to User if I'm not supposed to create a model for one? ----!!!!
 	user_id = models.ForeignKey(User)
 	first_name = models.CharField(max_length=100)
 	middle_name = models.CharField(max_length=100)
