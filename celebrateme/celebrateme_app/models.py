@@ -1,9 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import User
 # Need to figure out proper adding of User class and properties, because it is referenced in the Foreign Key in Deceased
 
-class User(models.Model):
-	"""I don't know what to put here at this point, but need it to reference to a ForeignKey in Deceased."""
-	pass
+
 
 class Deceased(models.Model):
 	"""Defines the attributes and data points associated with the person who the memorial site is being created for."""
