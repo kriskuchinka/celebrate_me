@@ -14,7 +14,9 @@ class Deceased(models.Model):
 	url_slug = models.SlugField(max_length=100)
 	dob = models.DateField(auto_now=False, auto_now_add=False)
 	dod = models.DateField(auto_now=False, auto_now_add=False)
-
+	
+	def __str__(self):
+		return "{} {}".format(self.first_name, self.last_name)
 
 class Image(models.Model):
 	"""Stores and manages the images that users will upload to the site and share."""
@@ -30,6 +32,11 @@ class Biography(models.Model):
 	title = models.CharField(max_length=200)
 	content = models.CharField(max_length=600)
 	survived_by = models.CharField(max_length=600)
+
+	def __str__(self):
+		return "Biography: {} {}".format(self.deceased_id.first_name, self.deceased_id.last_name) 
+	
+
 
 class Quote(models.Model):
 	"""Enables user to share a quote or saying and reference who said or wrote it. Ideally, something meaningful to the departed or their loved ones."""
