@@ -14,4 +14,4 @@ def design1(request):
 	bio = Biography.objects.get(deceased_id=person.id)
 	image = Image.objects.get(deceased_id=person.id)
 	print(bio)
-	return render(request, "design1.html", {"people":person, "bio":bio})
+	return render(request, "design1.html", {"people":person, "bio":bio, "image":image})

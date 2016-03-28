@@ -1,16 +1,23 @@
-<h1>Dead people should appear here.</h1>
+{% load staticfiles %}
+<link rel="stylesheet" href="/static/css/design1_styles.css">
 
-<h3>Name:</h3>
-<p>{{people.first_name}} {{people.middle_name}} {{people.last_name}}</p>
+<h1 class="name-main">{{people.first_name}} {{people.middle_name}} {{people.last_name}}</h1>
 
-<img src="../deceased_pics/person.jpg" alt="">
-<img src="../celebrateme/deceased_pics/person.jpg" alt="">
+<img class="deceased-image" src="/static/{{image.source}}" alt="{{image.caption}}">
 
-<h3>Date of Birth:</h3>
-<p>{{people.dob}}</p>
+<section class="stats">
+	<div class="life-stats">
+		<h3>Date of Birth: {{people.dob}}</h3>	
+	</div>
 
-<h3>Date of Death:</h3>
-<p>{{people.dod}}</p>
+	<div class="life-stats">
+		<h3>Date of Death: {{people.dod}}</h3>
+	</div>
+</section>
+
+
+
+
 
 <h3>Biography:</h3>
 <h4>{{bio.title}}</h4>
