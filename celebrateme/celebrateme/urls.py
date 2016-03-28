@@ -23,6 +23,6 @@ from django.conf.urls.static import static
 urlpatterns = [
 	url(r'^$', index, name="index"),
     url(r'^admin/', admin.site.urls),
-    url(r'^design1/', design1, name="design1"),
+    url(r'^memorial/(?P<name>[_0-9a-zA-Z]+)$', user_display),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

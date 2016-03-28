@@ -1,17 +1,17 @@
 {% load staticfiles %}
 <link rel="stylesheet" href="/static/css/design1_styles.css">
 
-<h1 class="name-main">{{people.first_name}} {{people.middle_name}} {{people.last_name}}</h1>
+<h1 class="name-main">{{person.first_name}} {{person.middle_name}} {{person.last_name}}</h1>
 
 <img class="deceased-image" src="/static/{{image.source}}" alt="{{image.caption}}">
 
 <section class="stats">
 	<div class="life-stats">
-		<h3>Date of Birth: {{people.dob}}</h3>	
+		<h3>Date of Birth: {{person.dob}}</h3>	
 	</div>
 
 	<div class="life-stats">
-		<h3>Date of Death: {{people.dod}}</h3>
+		<h3>Date of Death: {{person.dod}}</h3>
 	</div>
 </section>
 
