@@ -1,3 +1,7 @@
+/* -----------------> 
+Base styling for all pages
+<----------------- */
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -7,13 +11,23 @@
 body {
 	width: 100%;
 	margin: 0;
+	padding: 5%;
 }
 
+
+
+/* -----------------> 
+Begin Design1 template styling 
+<----------------- */
+
+
+/* Design1 name styling (top of page) */
 .name-main {
 	text-align: center;
 	color: green;
 }
 
+/* Design1 image class styling */
 .deceased-image {
 	width: 50%;
 	display:block;
@@ -21,13 +35,21 @@ body {
 	margin-right: auto;
 }
 
+/* Design1 section for dob and dod display */
 .stats {
 	width: 100%;
 	text-align: center;
 }
 
+/* Design1 dob and dod display */
 .life-stats {
 	display: inline-block;
 	width: 35%;
+}
+
+/* Design1 H1 styling */
+.heading {
+	color: purple;
+	text-align: center;
 }
 

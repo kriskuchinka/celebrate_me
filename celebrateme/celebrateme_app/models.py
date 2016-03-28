@@ -44,3 +44,7 @@ class Quote(models.Model):
 	deceased_id = models.ForeignKey(Deceased)
 	content = models.CharField(max_length=400)
 	author = models.CharField(max_length=200)
+
+#-----> Do I need to cast this to a string? It broke the DB when I had the lines below not commented out.
+	# def __str__(self):
+	# 	return "{} -{}".format(self.deceased_id.content, self.deceased_id.author)

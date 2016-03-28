@@ -10,8 +10,9 @@ def index(request):
 
 def design1(request):
 	temp_var = Deceased.objects.all()
-	person = temp_var[0]
+	person = temp_var[1]
 	bio = Biography.objects.get(deceased_id=person.id)
 	image = Image.objects.get(deceased_id=person.id)
+	quote = Quote.objects.get(deceased_id=person.id)
 	print(bio)
-	return render(request, "design1.html", {"people":person, "bio":bio, "image":image})
+	return render(request, "design1.html", {"people":person, "bio":bio, "image":image, "quote":quote})
