@@ -1,0 +1,20 @@
+/* -----------------> 
+Base styling for all pages
+<----------------- */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	background-color: #C3D5E1; /*light blue/gray*/
+}
+
+/* -----------------> 
+Begin 404 error page styling 
+<----------------- */
+
