@@ -21,21 +21,26 @@ footer {
 }
 
 /* -----------------> 
-Begin 404 error page styling 
+Begin Index page styling 
 <----------------- */
 
-.center-text {
+.title {
 	text-align: center;
 }
 
-.hero {
-	margin-left: 15%;
-	margin-right: 15%;	
-	width: 70%;
+.content {
+	text-align: justify;
 }
 
-.index-links {
+.main_pic {
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+nav {
 	text-align: center;
+	width: 100%;
 }
 
 .index-links ul li {

@@ -1,13 +1,34 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Failure to Locate</title>
+	<!-- Link to External Stylesheet -->
 	<link rel="stylesheet" href="/static/css/404_styles.css">
+	<!-- Link to Google jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </head>
+
 <body>
-	<h1>I'm sorry, but there seems to be some trouble.</h1>
-	<h3>The URL address that you entered in the browser does not have a matching page. Please check for spelling errors in the URL.</h3>
-	<p>In the future, there will be a search option to make finding your loved one easier.</p>
+	<h1 class="center-text">I'm sorry, but there seems to be some trouble.</h1>
+	
+	<img class="hero" src="/static/pics/water.jpg" alt="Endless horizon over water.">
+
+	<h3>The URL address that you entered in the browser does not have a matching page. Please check for spelling errors in the URL that you entered.</h3>
+
+	<nav class="index-links">
+		<ul>
+			<li>Return to Home</li>
+		</ul>
+	</nav>
+
+	<p class="center-text">Note: In the future, there will be a search option to make finding your loved one easier.</p>
 </body>
+
+<footer>
+	<p>&copy Kris Kuchinka, 2016</p>
+</footer>
+
 </html>

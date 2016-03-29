@@ -1,27 +1,48 @@
 {% load staticfiles %}
-<link rel="stylesheet" href="/static/css/design1_styles.css">
 
-<h1 class="name-main">{{person.first_name}} {{person.middle_name}} {{person.last_name}}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Link to External Stylesheet -->
+	<link rel="stylesheet" href="/static/css/design1_styles.css">
+	<!-- Link to Google jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<title>Memorial</title>
+</head>
 
-<img class="deceased-image" src="/static/{{image.source}}" alt="{{image.caption}}">
+<body>
+	<h1 class="name-main">{{person.first_name}} {{person.middle_name}} {{person.last_name}}</h1>
 
-<section class="stats">
-	<div class="life-stats">
-		<h3>Date of Birth: {{person.dob}}</h3>	
-	</div>
+	<img class="deceased-image" src="/static/{{image.source}}" alt="{{image.caption}}">
 
-	<div class="life-stats">
-		<h3>Date of Death: {{person.dod}}</h3>
-	</div>
-</section>
+	<section class="stats">
+		<div class="life-stats">
+			<h3>Date of Birth: {{person.dob}}</h3>	
+		</div>
+		<div class="life-stats">
+			<h3>Date of Death: {{person.dod}}</h3>
+		</div>
+	</section>
+
+	<h1 class="heading">{{bio.title}}</h1>
+	<p>{{bio.content}}</p>
+
+	<h1 class="heading">Survived By:</h1>
+	<p>{{bio.survived_by}}</p>
+
+	<h1 class="heading">Favorite Quote:</h1>
+	<h4>{{quote.content}}</h4>
+	<h4>{{quote.author}}</h4>
+	
+</body>
+
+<footer>
+	<p>&copy Kris Kuchinka, 2016</p>
+</footer>
+
+</html>
 
 
-<h1 class="heading">{{bio.title}}</h1>
-<p>{{bio.content}}</p>
 
-<h1 class="heading">Survived By:</h1>
-<p>{{bio.survived_by}}</p>
 
-<h1 class="heading">Favorite Quote:</h1>
-<h4>{{quote.content}}</h4>
-<h4>{{quote.author}}</h4>

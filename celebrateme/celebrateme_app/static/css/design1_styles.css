@@ -10,11 +10,15 @@ Base styling for all pages
 
 body {
 	width: 100%;
-	margin: 0;
+	margin: 0;	
+	background-color: #C3D5E1; /*light blue/gray*/
 	padding: 5%;
 }
 
-
+footer {
+	text-align: center;
+	color: white;
+}
 
 /* -----------------> 
 Begin Design1 template styling 

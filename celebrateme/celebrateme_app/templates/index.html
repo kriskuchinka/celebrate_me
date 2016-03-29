@@ -1,2 +1,37 @@
-<h1>Hello, World</h1>
-<h3>This is the temporary page for CelebrateMe.Life. The site is under construction, but will be running around May of 2016.</h3>
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Link to external style sheet -->
+	<link rel="stylesheet" href="/static/css/index_styles.css">
+	<!-- Link to Google jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<title>CelebrateMe Home</title>
+</head>
+<body>
+	<h1 class="title">CelebrateMe.Life</h1>
+
+	<img class="main_pic" src="/static/pics/flower_hero.jpg" alt="Spring flowers.">
+
+	<h3 class="content">Welcome to CelebrateMe.Life, the website that helps you create a fitting memorial for deceased loved ones. Wether you have lost family or friend, we want to help you celebrate their memory.</h3>
+
+	<h4 class="content">This site is currently under construction, but it is being worked on daily. Please come back and visit us again real soon.</h4>	
+
+	<nav class="index-links">
+		<ul>
+			<li>Log In</li>
+			<li>Sign Up</li>
+			<li>Create Memorial</li>
+		</ul>
+	</nav>
+	
+</body>
+
+<footer>
+	<p>&copy Kris Kuchinka, 2016</p>
+</footer>
+
+</html>
+
