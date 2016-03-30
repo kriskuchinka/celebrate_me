@@ -21,14 +21,14 @@ class Deceased(models.Model):
 class Image(models.Model):
 	"""Stores and manages the images that users will upload to the site and share."""
 
-	deceased_id = models.ForeignKey(Deceased)
+	deceased_id = models.OneToOneField(Deceased)
 	caption = models.CharField(max_length=250)
 	source = models.ImageField(upload_to='deceased_pics')
 
 class Biography(models.Model):
 	"""Stores and manages the personal biography about the deceased person. Account user has full editing powers."""
 
-	deceased_id = models.ForeignKey(Deceased)
+	deceased_id = models.OneToOneField(Deceased)
 	title = models.CharField(max_length=200)
 	content = models.CharField(max_length=600)
 	survived_by = models.CharField(max_length=600)
@@ -41,7 +41,7 @@ class Biography(models.Model):
 class Quote(models.Model):
 	"""Enables user to share a quote or saying and reference who said or wrote it. Ideally, something meaningful to the departed or their loved ones."""
 
-	deceased_id = models.ForeignKey(Deceased)
+	deceased_id = models.OneToOneField(Deceased)
 	content = models.CharField(max_length=400)
 	author = models.CharField(max_length=200)
 
