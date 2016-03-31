@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from celebrateme_app.models import *
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -18,3 +19,6 @@ def user_display(request, name):
 
 def sign_up(request):
 	return render(request, "sign_up.html")
+
+def create_user(request):
+	return "Create User was called."
