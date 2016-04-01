@@ -21,4 +21,13 @@ def sign_up(request):
 	return render(request, "sign_up.html")
 
 def create_user(request):
-	return "Create User was called."
+	username = request.POST.get("username")
+	email = request.POST.get("email")
+	password = request.POST.get("password")
+
+	user = User.objects.create_user(username, email, password)
+	
+	return HttpResponse("Create User was called. username = {}, email = {}, password = {}".format(username, email, password))
+
+def create_memorial(request):
+	return render(request, "create_memorial.html")

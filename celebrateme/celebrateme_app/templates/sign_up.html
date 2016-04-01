@@ -2,20 +2,30 @@
 
 <!-- Link to Google jQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<!-- Link to External Stylesheet -->
+<link rel="stylesheet" href="/static/css/sign_up_styles.css">
 
 
+<section>
+	<h1>Thank you for your interest in signing up for our website!</h1>
+	<img src="/static/pics/sunset_water.jpg" alt="Beautiful sunset over ocean.">
+</section>
 
-<h1>Thank you for your interest in signing up for our website!</h1>
-
-<form id="sign_up_form" action="Post">
-	{% csrf_token %}
-	<input type="text" name="username" placeholder="Username">
-	<input type="email" name="email" placeholder="Email">
-	<input type="password" name="password" placeholder="Password">
-	<input type="password" name="password_conf" placeholder="Confirm Password">
-	<input type="submit" id="sign_up" value="Sign Up">
-</form>
+<section class="sign_up_hero">
+	<form id="sign_up_form" action="create_user" method="post">
+		{% csrf_token %}
+		<p><input type="text" name="username" placeholder="Username"></p>
+		<p><input type="email" name="email" placeholder="Email"></p>
+		<p><input type="password" name="password" placeholder="Password"></p>
+		<p><input type="password" name="password_conf" placeholder="Confirm Password"></p>
+		<input type="submit" id="sign_up" value="Sign Up">
+	</form>
+</section>
 
 <div id="div_id"></div>
+
+<footer>
+	<p>&copy Kris Kuchinka, 2016</p>
+</footer>
 
 <script src="/static/js/sign_up.js"></script>

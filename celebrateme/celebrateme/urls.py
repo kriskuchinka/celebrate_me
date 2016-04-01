@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^memorial/(?P<name>[_0-9a-zA-Z]*)$', user_display),
     url(r'^sign_up/create_user$', create_user),
     url(r'^sign_up/$', sign_up),
+    url(r'^create_memorial/$', create_memorial),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

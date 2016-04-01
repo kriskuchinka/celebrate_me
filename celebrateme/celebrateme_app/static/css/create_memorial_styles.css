@@ -1,0 +1,70 @@
+/* -----------------> 
+Base styling for all pages
+<----------------- */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+	background-color: #C3D5E1; /*light blue/gray*/
+	padding: 5%;
+}
+
+footer {
+	text-align: center;
+	color: white;
+}
+
+/* -----------------> 
+Begin Create Memorial page styling 
+<----------------- */
+
+.side-hero {
+	display: inline-block;
+	width: 60%;
+	padding: 5%;
+}
+
+.memorial-form {
+	display: inline-block;
+	width: 25%;
+}
+
+section.side-hero section.memorial-form {
+	padding: 5%;
+}
+
+.pink-flower {
+	width: 100%;
+}
+
+.fitting-memorial {
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: justify;
+}
+
+.fitting-memorial-heading {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

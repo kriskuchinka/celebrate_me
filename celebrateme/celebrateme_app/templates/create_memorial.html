@@ -1,0 +1,52 @@
+{% load staticfiles %}
+
+<!-- Link to Google jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<!-- Link to External Stylesheet -->
+<link rel="stylesheet" href="/static/css/create_memorial_styles.css">
+
+<section class="side-hero">
+	<h1 class="fitting-memorial-heading">Create a Fitting Memorial</h1>
+	
+	<img src="/static/pics/pink_flower.jpg" class="pink-flower" alt="Bright and beautiful flower.">
+
+	<h2 class="fitting-memorial">Your loved one deserves a memorial that family and friends can enjoy. Our goal is to provide simple options to aid you in representing the life of your departed friend or family. Please fill out all the fields that you can.</h2>
+</section>
+
+<section class="memorial-form">
+	
+
+	<form id="create_memorial_form" action="Post">
+		{% csrf_token %}
+		<p><input type="text" name="first_name" placeholder="First Name"></p>
+		<p><input type="text" name="middle_name" placeholder="Middle Name"></p>
+		<p><input type="text" name="last_name" placeholder="Last Name"></p>
+		<p><input type="text" name="date_of_birth" placeholder="Date of Birth"></p>
+		<p><input type="text" name="date_of_death" placeholder="Date of Death"></p>
+		<p><input type="text" name="biography_title" placeholder="Biography Title"></p>
+		<p><textarea rows="4" cols="50" name="biography" placeholder="Biography"></textarea></p>
+		<p><select>
+				<option value="relationship">Relationship</option>
+				<option value="spouse">Spouse</option>
+				<option value="parent">Parent</option>
+				<option value="children">Child</option>
+				<option value="aunt">Aunt</option>
+				<option value="uncle">Uncle</option>
+				<option value="grandparent">Grandparent</option>
+		   </select>
+			<input type="text" name="survived_by" placeholder="Survived By">
+		</p>
+		<p><textarea rows="4" cols="50" type="text" name="favorite_quote" placeholder="Favorite Quote"></textarea></p>
+		<p><input type="text" name="quote_author" placeholder="Quote Author"></p>
+		<p>upload image</p>
+		<p>choose template</p>
+		
+		<input type="submit" id="create_memorial" value="Create Memorial">
+	</form>
+</section>
+
+<footer>
+	<p>&copy Kris Kuchinka, 2016</p>
+</footer>
+
+<script src="/static/js/create_memorial.js"></script>
