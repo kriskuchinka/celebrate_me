@@ -18,14 +18,14 @@
 <section class="memorial-form">
 	
 
-	<form id="create_memorial_form" action="Post">
+	<form id="create_memorial_form" action="/create_memorial_action/" method="Post">
 		{% csrf_token %}
 		<p><input type="text" name="first_name" placeholder="First Name"></p>
 		<p><input type="text" name="middle_name" placeholder="Middle Name"></p>
 		<p><input type="text" name="last_name" placeholder="Last Name"></p>
 		<p><input type="text" name="date_of_birth" placeholder="Date of Birth"></p>
 		<p><input type="text" name="date_of_death" placeholder="Date of Death"></p>
-		<p><input type="text" name="biography_title" placeholder="Biography Title"></p>
+		<!-- <p><input type="text" name="biography_title" placeholder="Biography Title"></p>
 		<p><textarea rows="4" cols="50" name="biography" placeholder="Biography"></textarea></p>
 		<p><select>
 				<option value="relationship">Relationship</option>
@@ -40,7 +40,7 @@
 		</p>
 		<p><textarea rows="4" cols="50" type="text" name="favorite_quote" placeholder="Favorite Quote"></textarea></p>
 		<p><input type="text" name="quote_author" placeholder="Quote Author"></p>
-		<p>upload image</p>
+		<p>upload image</p> -->
 		
 		<input type="submit" id="create_memorial" value="Create Memorial">
 	</form>

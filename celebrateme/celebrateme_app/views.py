@@ -34,23 +34,34 @@ def create_user(request):
 
 
 def create_memorial(request):
-	
 	return render(request, "create_memorial.html")
 
+def create_memorial_action(request):
+	first_name = request.POST.get('first_name')
+	middle_name = request.POST.get('middle_name')
+	last_name = request.POST.get('last_name')
+	url_slug = '{}_{}'.format(first_name, last_name)
+	date_of_birth = request.POST.get('date_of_birth')
+	date_of_death = request.POST.get('date_of_death')
+
+	deceased = Deceased(user_id=request.user, first_name=first_name, middle_name=middle_name, last_name=last_name, url_slug=url_slug, dob=date_of_birth, dod=date_of_death)
+	deceased.save()
+	return redirect('/memorial/' + url_slug)
+
 def login_action(request):
-    username = request.POST.get('username')
-    password = request.POST.get("password")
-    user = authenticate(username=username, password=password)
-    if user is not None:
-        if user.is_active:
-            login(request, user)
-            return redirect("/create_memorial/")
-        else:
-            # Return a 'disabled account' error message
-            ...
-    else:
-        return HttpResponse(str(user) + ' is already logged in.')
-        ...
+	username = request.POST.get('username')
+	password = request.POST.get("password")
+	user = authenticate(username=username, password=password)
+	if user is not None:
+		if user.is_active:
+			login(request, user)
+			return redirect("/create_memorial/")
+		else:
+			# Return a 'disabled account' error message
+			...
+	else:
+		return HttpResponse(str(user) + ' is already logged in.')
+		...
 
 def login_page(request):
 	return render(request, "login.html")
