@@ -46,6 +46,15 @@ def create_memorial_action(request):
 
 	deceased = Deceased(user_id=request.user, first_name=first_name, middle_name=middle_name, last_name=last_name, url_slug=url_slug, dob=date_of_birth, dod=date_of_death)
 	deceased.save()
+
+	""" This is not real code do not try to run...
+
+	image_name = request.POST.get("image_name")
+	image_src = request.POST.get('image_src')
+
+	image = Image(deceased_id=deseased, image_name=image_name, image_src=image_src)
+
+	image.save()"""
 	return redirect('/memorial/' + url_slug)
 
 def login_action(request):
