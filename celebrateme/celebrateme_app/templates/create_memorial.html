@@ -5,6 +5,8 @@
 <!-- Link to External Stylesheet -->
 <link rel="stylesheet" href="/static/css/create_memorial_styles.css">
 
+<h3 class="username-display">{% if user.is_authenticated %}{{ user.username }} is logged in <a href="/logout/">Log Out</a> {% else %} <a href="/login_page/">Log In</a>{% endif %}</h3>
+
 <section class="side-hero">
 	<h1 class="fitting-memorial-heading">Create a Fitting Memorial</h1>
 	
@@ -39,7 +41,6 @@
 		<p><textarea rows="4" cols="50" type="text" name="favorite_quote" placeholder="Favorite Quote"></textarea></p>
 		<p><input type="text" name="quote_author" placeholder="Quote Author"></p>
 		<p>upload image</p>
-		<p>choose template</p>
 		
 		<input type="submit" id="create_memorial" value="Create Memorial">
 	</form>

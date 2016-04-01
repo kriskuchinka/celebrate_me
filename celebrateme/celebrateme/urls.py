@@ -27,6 +27,9 @@ urlpatterns = [
     url(r'^sign_up/create_user$', create_user),
     url(r'^sign_up/$', sign_up),
     url(r'^create_memorial/$', create_memorial),
+    url(r'^login_page/$', login_page),
+    url(r'^login/$', login_action),
+    url(r'^logout/$', logout_action)
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

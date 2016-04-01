@@ -6,12 +6,12 @@
 <link rel="stylesheet" href="/static/css/sign_up_styles.css">
 
 
-<section>
-	<h1>Thank you for your interest in signing up for our website!</h1>
-	<img src="/static/pics/sunset_water.jpg" alt="Beautiful sunset over ocean.">
+<section class="side-hero">
+	<h1 class="sign-up-header">Thank you for your interest in our website!</h1>
+	<img class="sunset-ocean" src="/static/pics/sunset_water.jpg" alt="Beautiful sunset over ocean.">
 </section>
 
-<section class="sign_up_hero">
+<section class="sign-up-form">
 	<form id="sign_up_form" action="create_user" method="post">
 		{% csrf_token %}
 		<p><input type="text" name="username" placeholder="Username"></p>
