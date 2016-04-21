@@ -5,7 +5,7 @@ body {
 }
 
 p {
-  padding-right: 120px;
+  padding-right: 150px;
 }
 
 /*stylize navigation for desired effects. I'm making mine very simple....*/
@@ -20,7 +20,7 @@ p {
   bottom: 0;
   left: 0;
   /*hide nav behind content*/
-  z-index= 0;
+  z-index: 0;
   /*get rid of color gap on top of page*/
   margin-top: 0; 
 }
@@ -31,7 +31,7 @@ p {
   float: right; 
 }
 
-.nav_item a {
+.nav-item a {
 	display: block;
 	color: #ffffff; /*white*/
 	text-decoration: none;
@@ -39,32 +39,29 @@ p {
   padding-right: 50px;
 }
 
-li.nav_item {
+li.nav-item {
   padding: 12px;
   font-size: 22px;
 }
       /*----end of navigation styling----*/
 
-.site_wrap {
+.site-wrap {
   min-width: 100%;
   min-height: 100%;
-  background-color: #ffffff; /*white*/
-  position: relative;
-  top: 0;
-  bottom: 100%;
-  right: 0;
+  background-color: #EDFFE8;  /*A Pantone version of white*/
+  position: absolute;
   z-index: 1;
   padding: 4em; /*spaces out content for hamburger menu*/
 }
 
 /*stylize nav_trigger actions and looks*/
 /*hide the checkbox*/
-.nav_trigger {
+.nav-trigger {
   position: absolute;
   clip: rec(0,0,0,0);
 }
 
-label[for="nav_trigger"] {
+label[for="nav-trigger"] {
   /*nav stays in same position as user scrolls*/
   position: fixed;
   top: 15px;
@@ -78,7 +75,7 @@ label[for="nav_trigger"] {
 }
 
 /*create hamburger menu icon*/
-.hidden_nav:before {
+.hidden-nav:before {
   content: "";
   position: absolute;
   top: 1em;
@@ -92,17 +89,17 @@ label[for="nav_trigger"] {
 /*the following lines make the effect work*/
 /*below styling controls label position when menu opens- add 15px, because we did right:15px in label[for="nav-trigger"]*/
 /*uses adjacent sibling selector (+)--> nav-trigger:checked must come first so label moves after checkbox is activated*/
-.nav_trigger:checked + label {
-   right: 200px;
+.nav-trigger:checked + label {
+   right: 16%;
 }
 
 /*ensures that the site-wrap is pushed to the left*/
 /*uses general sibling selector (~) to target site wrap after nav-trigger gets activated*/
-.nav_trigger:checked ~ .site_wrap {
-  right: 300px;
+.nav-trigger:checked ~ .site-wrap {
+  right: 14%;
 }
 
-   /*add slight transition effect*/
-.nav_trigger + label, .site_wrap {
-  transition: right 0.2s
+/*add slight transition effect*/
+.nav-trigger + label, .site-wrap {
+  transition: right 0.3s
 }
