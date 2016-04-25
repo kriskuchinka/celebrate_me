@@ -10,10 +10,12 @@ body {
   padding: 0;
   perspective: 1px;
   transform-style: preserve-3d;
-  height: 100%;
+  height 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: Nunito;
+  background-color: #C6C6C6; /* base gray */
+  background-image: url("../images/background-gray_triangles.jpg");
 }
 
 /*h1 {
@@ -48,7 +50,7 @@ section.title-sect {
 
 .welcome_image {
   width: 25%;
-  padding-right: 25%;
+  padding-right: 10%;
   float: right;
 }
 
@@ -56,7 +58,7 @@ section.title-sect {
   position: relative;
 /*  padding: 25vh 10%;*/   /*commented out, because it was causing problems*/
   min-height: 100%;
-  width: 60%;
+  width: 86%;
   box-sizing: border-box;
   box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
   transform-style: inherit;
@@ -102,8 +104,7 @@ section.title-sect {
 }
 
 #slide_1:before {
-  background-color: #C6C6C6; /* base gray */
-  /*background-image: url("http://bit.ly/1PzC2Fc");*/
+  background-image: url("http://bit.ly/1PzC2Fc");
   transform: translateZ(-1px) scale(2);
   z-index: -1;
 }
