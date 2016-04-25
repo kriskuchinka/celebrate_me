@@ -11,7 +11,7 @@ p {
 /*stylize navigation for desired effects. I'm making mine very simple....*/
 .navigation {
   list-style: none;
-  background: #2dC7fa; /*sky blue*/
+  background: #489A31; /* green */
   width: 100%;
   height: 100%;
   position: fixed;
@@ -33,10 +33,16 @@ p {
 
 .nav-item a {
 	display: block;
-	color: #ffffff; /*white*/
+	color: #EDFFE8;  /* EXTREMELY light green */
 	text-decoration: none;
 	float: right;
   padding-right: 50px;
+}
+
+.nav-item a:hover {
+  color: #9A5E8D; /* Purple */
+  font-weight: bold;
+  font-size: 3em;
 }
 
 li.nav-item {
@@ -48,7 +54,7 @@ li.nav-item {
 .site-wrap {
   min-width: 100%;
   min-height: 100%;
-  background-color: #EDFFE8;  /*A Pantone version of white*/
+  background-color: #EDFFE8;  /* EXTREMELY light green */
   position: absolute;
   z-index: 1;
   padding: 4em; /*spaces out content for hamburger menu*/
@@ -90,13 +96,13 @@ label[for="nav-trigger"] {
 /*below styling controls label position when menu opens- add 15px, because we did right:15px in label[for="nav-trigger"]*/
 /*uses adjacent sibling selector (+)--> nav-trigger:checked must come first so label moves after checkbox is activated*/
 .nav-trigger:checked + label {
-   right: 16%;
+   right: 24%;
 }
 
 /*ensures that the site-wrap is pushed to the left*/
 /*uses general sibling selector (~) to target site wrap after nav-trigger gets activated*/
 .nav-trigger:checked ~ .site-wrap {
-  right: 14%;
+  right: 20%;
 }
 
 /*add slight transition effect*/
