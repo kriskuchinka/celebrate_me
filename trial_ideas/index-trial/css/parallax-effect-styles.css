@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Nunito);
+/*@import url(https://fonts.googleapis.com/css?family=Average);*/
 
 html {
   height: 100%;
@@ -13,18 +13,23 @@ body {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  font-family: Nunito;
+  font-family: 'Average', serif;
+}
+
+header {
+  font-size: 2em;
+  color: #6813A1; /* purple */
 }
 
 /*h1 {
   font-size: 250%;
 }*/
 
-p {
+/*p {
   font-size: 140%;
   line-height: 150%;
   color: #333;
-}
+}*/
 
 
 section.title-sect {
@@ -33,6 +38,10 @@ section.title-sect {
   background-color: #EED569; /* yellow */;
   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
   display: inline-block;
+  min-height: 100%;
+  width: 48%;
+  margin-left: 20%;
+  margin-bottom: 100px;
 }
 
 /*.header {
@@ -52,6 +61,10 @@ section.title-sect {
   float: right;
 }
 
+.mother-daughter-image {
+  border: 8px #6813A1 solid; /* purple */ 
+}
+
 .slide {
   position: relative;
 /*  padding: 25vh 10%;*/   /*commented out, because it was causing problems*/
@@ -60,6 +73,26 @@ section.title-sect {
   box-sizing: border-box;
   box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
   transform-style: inherit;
+}
+
+#slide_1 {
+  /*margin: 0 auto;*/
+  width: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: #6813A1; /* purple */
+}
+
+.triad {
+  width: 22%;
+  margin: 5%;
+}
+
+.slide-behind-1 {
+  background-image: url("../images/uncle_tommy.jpg");
+  background-attachment: fixed;
+  width: 50%;
+  height: 300px; 
 }
 
 .image-show {
@@ -109,9 +142,15 @@ section.title-sect {
 }
 
 
-#slide_2 {
-  background-image: url("http://bit.ly/1ogPhS3");
+.slide2 {
+  background-image: url("../images/grandpa_with_dog.jpg");
   background-attachment: fixed;
+  width: 50%;
+  height: 500px;
+  margin-left: 30%;
+  right: 10%;
+  top: 10%;
+
 }
 
 #slide_3:before {
@@ -123,3 +162,17 @@ section.title-sect {
 #slide_4 {
   background: #222222;
 }*/
+
+.closing-words {
+  height: 100px;
+  background-color: #EED569;
+  width: 60%;
+  margin: 0 24% 0 16%;
+}
+
+.copyright {
+  text-align: center;
+  margin-right: 10%;
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
