@@ -54,7 +54,7 @@ li.nav-item {
 .site-wrap {
   min-width: 100%;
   min-height: 100%;
-  background-color: #EDFFE8;  /* EXTREMELY light green */
+  background-color: #C6C6C6;  /* base-gray */
   position: absolute;
   z-index: 1;
   padding: 4em; /*spaces out content for hamburger menu*/
